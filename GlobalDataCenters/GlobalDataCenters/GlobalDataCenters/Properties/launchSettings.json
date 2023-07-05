@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GlobalDataCenters (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "GlobalDataCenters (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

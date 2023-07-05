@@ -1,0 +1,122 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="GlobalDataCenters.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GlobalDataCenters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
+    mc:Ignorable="d">
+
+    <Border Margin="48,47,40,47" Padding="10" BorderThickness="2" CornerRadius="10" BorderBrush="#79747E">
+
+        <chart:SfCartesianChart PaletteBrushes="{Binding PaletteBrushes}">
+
+            <chart:SfCartesianChart.DataContext>
+                <local:DataCenterPercentage />
+            </chart:SfCartesianChart.DataContext>
+
+            <chart:SfCartesianChart.Header>
+                <Border Margin="0,-10,0,20" Padding="7" BorderThickness="2,0,2,2" CornerRadius="0,0,7,7" BorderBrush="#79747E">
+                <TextBlock Text="Global Cloud Data Centers"/>
+               </Border>
+            </chart:SfCartesianChart.Header>
+            
+            <chart:SfCartesianChart.Legend>
+                <chart:ChartLegend Placement="Right" ItemMargin="4"/>
+            </chart:SfCartesianChart.Legend>
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:CategoryAxis LabelPlacement="BetweenTicks" ShowMajorGridLines="False" TickLineSize="0"/>
+            </chart:SfCartesianChart.XAxes>
+            
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis Interval="20" ShowMajorGridLines="False">
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:LabelStyle LabelFormat="0'%" FontSize="12"/>
+                    </chart:NumericalAxis.LabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="SoutheastAsia" 
+                              Label="East and South East Asia" ShowDataLabels="True">
+                <chart:StackedColumn100Series.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings Position="Inner" UseSeriesPalette="False" Context="DataLabelItem">
+                        <chart:CartesianDataLabelSettings.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Item.SoutheastAsia}" FontSize="12"/>
+                                    <TextBlock Text=" (" FontSize="12"/>
+                                    <TextBlock Text="{Binding Item.SoutheastAsiaPercentage}" FontSize="12"/>
+                                    <TextBlock Text="%" FontSize="12"/>
+                                    <TextBlock Text=")" FontSize="12"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </chart:CartesianDataLabelSettings.ContentTemplate>
+                    </chart:CartesianDataLabelSettings>
+                </chart:StackedColumn100Series.DataLabelSettings>
+            </chart:StackedColumn100Series>
+
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="NorthAmerica"
+                                Label="North America" ShowDataLabels="True">
+                <chart:StackedColumn100Series.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings Position="Inner" UseSeriesPalette="False" Context="DataLabelItem">
+                        <chart:CartesianDataLabelSettings.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Item.NorthAmerica}" FontSize="12"/>
+                                    <TextBlock Text=" (" FontSize="12"/>
+                                    <TextBlock Text="{Binding Item.NorthAmericaPercentage}" FontSize="12"/>
+                                    <TextBlock Text="%" FontSize="12"/>
+                                    <TextBlock Text=")" FontSize="12"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </chart:CartesianDataLabelSettings.ContentTemplate>
+                    </chart:CartesianDataLabelSettings>
+                </chart:StackedColumn100Series.DataLabelSettings>
+            </chart:StackedColumn100Series>
+
+            <chart:StackedColumn100Series  ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="Europe"
+                                Label="Europe" ShowDataLabels="True">
+                <chart:StackedColumn100Series.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings Position="Inner" UseSeriesPalette="False" Context="DataLabelItem">
+                        <chart:CartesianDataLabelSettings.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Item.Europe}" FontSize="12"/>
+                                    <TextBlock Text=" (" FontSize="12"/>
+                                    <TextBlock Text="{Binding Item.EuropePercentage}" FontSize="12"/>
+                                    <TextBlock Text="%" FontSize="12"/>
+                                    <TextBlock Text=")" FontSize="12"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </chart:CartesianDataLabelSettings.ContentTemplate>
+                    </chart:CartesianDataLabelSettings>
+                </chart:StackedColumn100Series.DataLabelSettings>
+            </chart:StackedColumn100Series>
+
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="Others"
+                               Label="Rest of the World" ShowDataLabels="True">
+                <chart:StackedColumn100Series.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings Position="Inner" UseSeriesPalette="False" Context="DataLabelItem">
+                        <chart:CartesianDataLabelSettings.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Item.Others}" FontSize="12"/>
+                                    <TextBlock Text=" (" FontSize="12"/>
+                                    <TextBlock Text="{Binding Item.OthersPercentage}" FontSize="12"/>
+                                    <TextBlock Text="%" FontSize="12"/>
+                                    <TextBlock Text=")" FontSize="12"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </chart:CartesianDataLabelSettings.ContentTemplate>
+                    </chart:CartesianDataLabelSettings>
+                </chart:StackedColumn100Series.DataLabelSettings>
+            </chart:StackedColumn100Series>
+
+        </chart:SfCartesianChart>
+    </Border>
+</Window>
