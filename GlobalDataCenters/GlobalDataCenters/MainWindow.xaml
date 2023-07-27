@@ -56,7 +56,7 @@
                 </chart:NumericalAxis>
             </chart:SfCartesianChart.YAxes>
 
-            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="SoutheastAsia[0]" 
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="SoutheastAsia" 
                               Label="East and South East Asia" ShowDataLabels="True">
                 <chart:StackedColumn100Series.DataLabelSettings>
                     <chart:CartesianDataLabelSettings Position="Inner" Context="DataLabelItem">
@@ -69,7 +69,7 @@
                 </chart:StackedColumn100Series.DataLabelSettings>
             </chart:StackedColumn100Series>
 
-            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="NorthAmerica[0]"
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="NorthAmerica"
                                 Label="North America" ShowDataLabels="True">
                 <chart:StackedColumn100Series.DataLabelSettings>
                     <chart:CartesianDataLabelSettings Position="Inner" Context="DataLabelItem">
@@ -82,7 +82,7 @@
                 </chart:StackedColumn100Series.DataLabelSettings>
             </chart:StackedColumn100Series>
 
-            <chart:StackedColumn100Series  ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="Europe[0]"
+            <chart:StackedColumn100Series  ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="Europe"
                                 Label="Europe" ShowDataLabels="True">
                 <chart:StackedColumn100Series.DataLabelSettings>
                     <chart:CartesianDataLabelSettings Position="Inner" Context="DataLabelItem">
@@ -95,7 +95,7 @@
                 </chart:StackedColumn100Series.DataLabelSettings>
             </chart:StackedColumn100Series>
 
-            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="Others[0]"
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="Others"
                                Label="Rest of the World" ShowDataLabels="True">
                 <chart:StackedColumn100Series.DataLabelSettings>
                     <chart:CartesianDataLabelSettings Position="Inner" Context="DataLabelItem">
