@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Networking;
 
 namespace GlobalDataCenters
 {
@@ -10,12 +11,15 @@ namespace GlobalDataCenters
     {
         public string Cloud { get; set; }
         public double SoutheastAsia { get; set; }
-        public double SoutheastAsiaPercentage { get; set; }
         public double NorthAmerica { get; set; }
-        public double NorthAmericaPercentage { get; set; }
         public double Europe { get; set; }
-        public double EuropePercentage { get; set; }
         public double Others { get; set; }
-        public double OthersPercentage { get; set; }
+
+        // For Data Labels
+        private double Total => SoutheastAsia + NorthAmerica + Europe + Others;
+        public string SoutheastAsiaValue => $"{SoutheastAsia} ({((SoutheastAsia / Total) * 100):F0}%)";
+        public string NorthAmericaValue => $"{NorthAmerica} ({((NorthAmerica / Total) * 100):F0}%)";
+        public string EuropeValue => $"{Europe} ({((Europe / Total) * 100):F0}%)";
+        public string OthersValue => $"{Others} ({((Others / Total) * 100):F0}%)";
     }
 }

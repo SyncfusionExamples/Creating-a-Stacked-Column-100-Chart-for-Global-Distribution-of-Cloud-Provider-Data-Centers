@@ -19,11 +19,11 @@ namespace GlobalDataCenters
         {
             CloudData = new ObservableCollection<CloudDataCenter>()
              {
-             new CloudDataCenter() { Cloud = "Microsoft", SoutheastAsia = 31,SoutheastAsiaPercentage=26.27, NorthAmerica = 37,NorthAmericaPercentage=31.36, Europe = 32,EuropePercentage=27.12, Others = 18,OthersPercentage=15.25},
-             new CloudDataCenter() { Cloud = "Amazon", SoutheastAsia = 21,SoutheastAsiaPercentage=27.63, NorthAmerica = 25, NorthAmericaPercentage=32.89,Europe = 18,EuropePercentage= 23.68, Others = 12,OthersPercentage=15.79 },
-             new CloudDataCenter() { Cloud = "Google", SoutheastAsia = 24,SoutheastAsiaPercentage=32.88, NorthAmerica = 25,NorthAmericaPercentage=34.25, Europe = 18, EuropePercentage=24.66,Others = 6,OthersPercentage=8.21 },
-             new CloudDataCenter() { Cloud = "Alibaba", SoutheastAsia = 49,SoutheastAsiaPercentage=81.66, NorthAmerica = 4,NorthAmericaPercentage=6.67, Europe = 4,EuropePercentage= 6.67, Others = 3,OthersPercentage=5 },
-             new CloudDataCenter() { Cloud = "IBM", SoutheastAsia = 8,SoutheastAsiaPercentage=13.33, NorthAmerica = 28,NorthAmericaPercentage= 46.67, Europe = 18,EuropePercentage=30, Others = 6 ,OthersPercentage=10},
+             new CloudDataCenter() { Cloud = "Microsoft", SoutheastAsia = 31,NorthAmerica = 37,Europe = 32, Others = 18},
+             new CloudDataCenter() { Cloud = "Amazon", SoutheastAsia = 21, NorthAmerica = 25,Europe = 18, Others = 12},
+             new CloudDataCenter() { Cloud = "Google", SoutheastAsia = 24, NorthAmerica = 25, Europe = 18, Others = 6 },
+             new CloudDataCenter() { Cloud = "Alibaba", SoutheastAsia = 49, NorthAmerica = 4, Europe = 4, Others = 3},
+             new CloudDataCenter() { Cloud = "IBM", SoutheastAsia = 8, NorthAmerica = 28, Europe = 18, Others = 6 },
               };
 
             CustomBrushes = new List<Brush>()
