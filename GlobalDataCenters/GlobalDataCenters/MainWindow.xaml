@@ -1,0 +1,135 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="GlobalDataCenters.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GlobalDataCenters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
+    mc:Ignorable="d">
+
+    <Border Margin="48,47,40,47" Padding="10" BorderThickness="2" CornerRadius="10" BorderBrush="#79747E">
+
+        <Border.DataContext>
+            <local:DataCenterPercentage />
+        </Border.DataContext>
+
+        <Border.Resources>
+            <x:String x:Key="PathData">
+                M18.854051,23.226788L18.820319,23.385306C18.61612,24.31292,18.351556,25.054837,18.141759,25.558306L18.116857,25.617243 18.311971,25.553087C19.253129,25.2143,20.074418,24.623444,20.694495,23.862816L20.766187,23.770458 20.728526,23.755539C20.361344,23.611891,19.73083,23.397375,18.896731,23.234589z M14.205219,23.219828L13.991865,23.26068C13.428771,23.374966,12.844536,23.532719,12.243913,23.743693L12.175313,23.768517 12.292342,23.915432C12.984977,24.743599,13.91846,25.363297,14.983139,25.666258L15.04532,25.682081 14.924396,25.42074C14.606267,24.708632,14.377844,23.99601,14.221138,23.29513z M16.609143,23.006314C16.049825,23.00222,15.450946,23.035164,14.820055,23.120631L14.734649,23.133141 14.742027,23.168135C14.928875,24.005806,15.222798,24.860617,15.657382,25.709526L15.715021,25.818474 15.881291,25.841265C16.086396,25.863472 16.294852,25.874234 16.505996,25.872898 16.822711,25.870894 17.133031,25.841761 17.43476,25.787718L17.455127,25.783474 17.482415,25.726219C17.685975,25.294222,18.047021,24.426707,18.304996,23.242661L18.327119,23.137591 18.31116,23.135073C17.799144,23.060772,17.228389,23.010845,16.609143,23.006314z M13.935014,20.773573L11.037804,20.791697 11.040922,20.844757C11.108653,21.732086,11.389754,22.560118,11.832634,23.277916L11.856167,23.314081 11.912215,23.292822C12.669976,23.016346,13.401485,22.820685,14.099082,22.688545L14.102981,22.687853 14.074149,22.512242C13.995062,21.99448,13.95252,21.485909,13.938932,20.991698z M18.601112,20.744385L14.471649,20.770216 14.473246,20.964859C14.486036,21.437758,14.526492,21.92429,14.601868,22.41948L14.631294,22.599304 14.688539,22.590437C15.366133,22.493185 16.00763,22.454518 16.605371,22.45714 17.148772,22.459526 17.656013,22.496037 18.121337,22.553681L18.42792,22.595925 18.475082,22.297137C18.532128,21.896673,18.574037,21.470402,18.593772,21.02153z M21.909381,20.723688L19.135961,20.741038 19.126756,21.065762C19.10526,21.534403,19.060596,21.979523,19.000131,22.397745L18.953944,22.686426 19.095162,22.713566C19.993404,22.898155,20.657611,23.140414,21.022258,23.292366L21.083629,23.318342 21.146091,23.219658C21.579841,22.496439,21.850432,21.665015,21.906928,20.776924z M14.648905,18.4671L14.606241,18.737015C14.54697,19.150646,14.50327,19.586205,14.482399,20.038714L14.476854,20.234156 18.602622,20.208349 18.601592,20.094612C18.588636,19.617039,18.548816,19.119011,18.475097,18.603739L18.457818,18.491038 18.248382,18.520066C17.735433,18.585482 17.233779,18.615725 16.749023,18.618771 16.083955,18.622872 15.450808,18.575796 14.864142,18.498207z M21.203508,17.733664L20.881324,17.862969C20.257108,18.101912,19.63556,18.274891,19.025577,18.394568L18.985746,18.401911 19.007062,18.542155C19.083259,19.079829,19.124009,19.599606,19.136676,20.098112L19.137456,20.205004 21.912438,20.187647 21.904714,20.043717C21.848439,19.235411,21.615199,18.475636,21.243779,17.802639z M11.740958,17.733464L11.667724,17.86252C11.304597,18.540056,11.080634,19.302641,11.034085,20.11158L11.028084,20.255728 13.942134,20.237501 13.948114,20.023955C13.969759,19.55119,14.0153,19.096234,14.077145,18.664253L14.122046,18.380017 13.861486,18.330057C13.020448,18.15923,12.320762,17.942026,11.822061,17.763079z M18.107432,15.23238L18.185123,15.425289C18.493049,16.214554,18.713939,16.983006,18.865258,17.722641L18.894395,17.872904 19.090171,17.834923C19.61214,17.723877,20.142089,17.57135,20.673907,17.368737L20.910314,17.275349 20.814576,17.142559C20.188096,16.316071,19.331597,15.673572,18.342021,15.310677z M15.004909,15.183185L14.837778,15.230478C13.725363,15.581087,12.766605,16.279574,12.088761,17.19718L12.03643,17.271689 12.047678,17.275744C12.530671,17.447531,13.204318,17.654331,14.01163,17.815829L14.216136,17.854885 14.220326,17.832466C14.447592,16.701842,14.765127,15.783353,15.000293,15.194604z M16.437997,14.980091C16.215123,14.981502,15.995416,14.996347,15.779641,15.023853L15.643728,15.045326 15.633467,15.068591C15.412617,15.574412,15.012245,16.602816,14.743402,17.940462L14.743074,17.942215 14.772762,17.946778C15.820591,18.097695,17.032802,18.150751,18.313964,17.971457L18.366477,17.963181 18.338216,17.818301C18.174152,17.020731,17.925902,16.187981,17.569724,15.330889L17.458158,15.070429 17.418088,15.062146C17.099877,15.006189,16.772309,14.977976,16.437997,14.980091z M16.430997,13.90811C20.025924,13.88511 22.967862,16.79106 22.990863,20.385994 23.012862,23.979931 20.106921,26.922879 16.512996,26.944878 12.91807,26.967879 9.9761306,24.06193 9.9531308,20.466994 9.9311315,16.873057 12.837072,13.930109 16.430997,13.90811z M19.788961,0.00014202876C23.695911,-0.023844561,27.015889,2.9931312,27.040914,6.9820841L27.037923,6.9820841C29.802854,7.9790862 31.980876,10.388065 31.998881,13.390056 32.021831,16.992018 29.061893,19.702997 26.07089,19.890984L25.882903,19.89901 24.967933,19.918999 24.949927,17.952004 25.11991,17.923012C28.11189,17.904 30.084895,16.023031 30.068904,13.375041 30.051875,10.72107 27.877883,8.5990765 24.885903,8.618089L24.874917,6.8060906C24.859902,4.4791124 22.703914,1.9481255 19.81899,1.9661312 17.05296,1.984136 14.530032,3.999105 14.549014,6.9910867L12.370016,7.0050943C12.370016,7.0050943 12.356039,7.0300882 12.356039,7.0241068 11.959008,5.7190931 10.493017,5.0201237 9.030078,5.3931067 7.3210469,5.8241036 7.080082,7.675103 7.1030923,8.7400668L6.9680835,8.742081 6.9680835,8.8230737C3.9761041,8.8420861 2.031113,10.911071 2.0471047,13.439037 2.0621186,15.960014 4.344082,17.997015 7.0860635,17.991005L7.9840661,18.014014 7.9910852,19.997002 7.0050708,20.00399C3.0151137,19.894005 0.022096637,16.99803 0.00012482273,13.451061 -0.018857612,10.437076 2.1291348,7.9020908 5.1390582,7.1050995 5.54207,5.2320974 6.7160717,3.9091094 8.4810716,3.4631288 10.140054,3.0431185 11.799037,3.4241276 12.979997,4.3581112 14.142035,1.8671325 16.822005,0.019154385 19.788961,0.00014202876z
+            </x:String>
+        </Border.Resources>
+
+        <chart:SfCartesianChart x:Name="chart" PaletteBrushes="{Binding CustomBrushes}">
+         
+            <chart:SfCartesianChart.Header>
+                <Border Margin="0,-10,0,20" Padding="7" BorderThickness="2,0,2,2" CornerRadius="0,0,7,7" BorderBrush="#79747E">
+                    <StackPanel Orientation="Horizontal">
+                     <Path Data="{StaticResource PathData}" Fill="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Global Cloud Data Centers" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </Border>
+            </chart:SfCartesianChart.Header>
+            
+            <chart:SfCartesianChart.Legend>
+                <chart:ChartLegend Placement="Right" ItemMargin="4"/>
+            </chart:SfCartesianChart.Legend>
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:CategoryAxis LabelPlacement="BetweenTicks" ShowMajorGridLines="False" TickLineSize="0">
+                    <chart:CategoryAxis.LabelStyle>
+                        <chart:LabelStyle LabelFormat="0'%" FontSize="13"/>
+                    </chart:CategoryAxis.LabelStyle>
+                </chart:CategoryAxis>
+            </chart:SfCartesianChart.XAxes>
+            
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis Interval="20" ShowMajorGridLines="False">
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:LabelStyle LabelFormat="0'%" FontSize="13"/>
+                    </chart:NumericalAxis.LabelStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="SoutheastAsia" 
+                              Label="East and South East Asia" ShowDataLabels="True">
+                <chart:StackedColumn100Series.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings Position="Inner" Context="DataLabelItem">
+                        <chart:CartesianDataLabelSettings.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Item.SoutheastAsia}" FontSize="12.5"/>
+                                    <TextBlock Text=" (" FontSize="12.5"/>
+                                    <TextBlock Text="{Binding Item.SoutheastAsiaPercentage}" FontSize="12.5"/>
+                                    <TextBlock Text="%" FontSize="12.5"/>
+                                    <TextBlock Text=")" FontSize="12.5"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </chart:CartesianDataLabelSettings.ContentTemplate>
+                    </chart:CartesianDataLabelSettings>
+                </chart:StackedColumn100Series.DataLabelSettings>
+            </chart:StackedColumn100Series>
+
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="NorthAmerica"
+                                Label="North America" ShowDataLabels="True">
+                <chart:StackedColumn100Series.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings Position="Inner" Context="DataLabelItem">
+                        <chart:CartesianDataLabelSettings.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Item.NorthAmerica}" FontSize="12.5"/>
+                                    <TextBlock Text=" (" FontSize="12.5"/>
+                                    <TextBlock Text="{Binding Item.NorthAmericaPercentage}" FontSize="12.5"/>
+                                    <TextBlock Text="%" FontSize="12.5"/>
+                                    <TextBlock Text=")" FontSize="12.5"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </chart:CartesianDataLabelSettings.ContentTemplate>
+                    </chart:CartesianDataLabelSettings>
+                </chart:StackedColumn100Series.DataLabelSettings>
+            </chart:StackedColumn100Series>
+
+            <chart:StackedColumn100Series  ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="Europe"
+                                Label="Europe" ShowDataLabels="True">
+                <chart:StackedColumn100Series.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings Position="Inner" Context="DataLabelItem">
+                        <chart:CartesianDataLabelSettings.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Item.Europe}" FontSize="12.5"/>
+                                    <TextBlock Text=" (" FontSize="12.5"/>
+                                    <TextBlock Text="{Binding Item.EuropePercentage}" FontSize="12.5"/>
+                                    <TextBlock Text="%" FontSize="12.5"/>
+                                    <TextBlock Text=")" FontSize="12.5"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </chart:CartesianDataLabelSettings.ContentTemplate>
+                    </chart:CartesianDataLabelSettings>
+                </chart:StackedColumn100Series.DataLabelSettings>
+            </chart:StackedColumn100Series>
+
+            <chart:StackedColumn100Series ItemsSource="{Binding CloudData}" XBindingPath="Cloud" YBindingPath="Others"
+                               Label="Rest of the World" ShowDataLabels="True">
+                <chart:StackedColumn100Series.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings Position="Inner" Context="DataLabelItem">
+                        <chart:CartesianDataLabelSettings.ContentTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Item.Others}" FontSize="12.5"/>
+                                    <TextBlock Text=" (" FontSize="12.5"/>
+                                    <TextBlock Text="{Binding Item.OthersPercentage}" FontSize="12.5"/>
+                                    <TextBlock Text="%" FontSize="12.5"/>
+                                    <TextBlock Text=")" FontSize="12.5"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </chart:CartesianDataLabelSettings.ContentTemplate>
+                    </chart:CartesianDataLabelSettings>
+                </chart:StackedColumn100Series.DataLabelSettings>
+            </chart:StackedColumn100Series>
+
+        </chart:SfCartesianChart>
+    </Border>
+</Window>
