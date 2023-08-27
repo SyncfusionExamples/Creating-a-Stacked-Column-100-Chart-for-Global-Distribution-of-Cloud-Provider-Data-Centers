@@ -1,3 +1,4 @@
+# Creating a Stacked Column 100 Chart for Global Distribution of Cloud Provider Data Centers
 The Stacked Column 100 chart is an effective tool for visually displaying the distribution and proportion of given data. In this graph, columns are piled on top of each other, with the cumulative portion of each stacked element consistently adding up to a total of 100%. This is similar to the StackedColumnSeries, with the key difference being that in the StackedColumn100Series, the cumulative total of stacked elements always equals 100%.
 
 <b>SegmentSpacing : </b>
