@@ -1,11 +1,17 @@
 # Creating a Stacked Column 100 Chart for Global Distribution of Cloud Provider Data Centers
+
+## Troubleshooting
+#### Path too long exception
+If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
+
+## Description 
 The Stacked Column 100 chart is an effective tool for visually displaying the distribution and proportion of given data. In this graph, columns are piled on top of each other, with the cumulative portion of each stacked element consistently adding up to a total of 100%. This is similar to the StackedColumnSeries, with the key difference being that in the StackedColumn100Series, the cumulative total of stacked elements always equals 100%.
 
-<b>SegmentSpacing : </b>
+## SegmentSpacing 
 
 The [SegmentSpacing](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.StackedColumnSeries.html#Syncfusion_UI_Xaml_Charts_StackedColumnSeries_SegmentSpacingProperty) property is utilized to customize the space between two segments. The default spacing value is 0, and it can vary from 0 to 1. In this context, 1 and 0 represent 100% and 0% of the total available space respectively.
 
-<b>CustomTemplate : </b>
+## CustomTemplate 
 
 The [CustomTemplate](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.StackedColumnSeries.html#Syncfusion_UI_Xaml_Charts_StackedColumnSeries_CustomTemplateProperty) property enables you to obtain the preferred view for the stacked column segment.
 
