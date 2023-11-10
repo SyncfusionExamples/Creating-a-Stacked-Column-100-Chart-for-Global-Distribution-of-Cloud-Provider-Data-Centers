@@ -1,9 +1,5 @@
 # Creating a Stacked Column 100 Chart for Global Distribution of Cloud Provider Data Centers
 
-## Troubleshooting
-#### Path too long exception
-If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
-
 ## Description 
 The Stacked Column 100 chart is an effective tool for visually displaying the distribution and proportion of given data. In this graph, columns are piled on top of each other, with the cumulative portion of each stacked element consistently adding up to a total of 100%. This is similar to the StackedColumnSeries, with the key difference being that in the StackedColumn100Series, the cumulative total of stacked elements always equals 100%.
 
@@ -18,5 +14,9 @@ The [CustomTemplate](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Cha
 This sample visualizes how to create a [stacked column 100 chart](https://www.syncfusion.com/winui-controls/charts/winui-stacked-column-100-chart) to depict the global distribution of cloud data centers.
 
 <img width="955" alt="Demo" src="https://github.com/SyncfusionExamples/Creating-a-Stacked-Column-100-Chart-for-Global-Distribution-of-Cloud-Provider-Data-Centers/assets/103025761/c2e99391-b6f1-41ef-bbc1-2e872f23345a">
+
+## Troubleshooting
+#### Path too long exception
+If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
 
 For a step by step procedure, refer to the [Global Distribution of Cloud Provider Data Centers blog](https://www.syncfusion.com/blogs/post/winui-100-stacked-column-chart-cloud-data-centers.aspx).
