@@ -2,14 +2,17 @@
 
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="ed6e2b80-d3ed-4e7f-8c7c-9c73379a883a"
+    Name="65d2dbbc-2dc0-4e65-b06b-802accc5c3d6"
     Publisher="CN=Saiyathalifathimabee"
     Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="65d2dbbc-2dc0-4e65-b06b-802accc5c3d6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>GlobalDataCenters</DisplayName>
